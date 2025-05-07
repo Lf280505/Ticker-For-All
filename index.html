@@ -1,0 +1,212 @@
+# Recriar o HTML incluindo novamente a seção "Nosso Time" com fotos
+html_com_equipe_reinserida = """
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Tickets For All</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: #f6f6f6; color: #111; }
+
+    nav {
+      background-color: #1db954;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+    }
+    nav a {
+      color: white;
+      font-weight: bold;
+      font-size: 1rem;
+      text-decoration: none;
+    }
+
+    .hero {
+      margin-top: 70px;
+    }
+
+    .logo-bar {
+      background-color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 100px 0;
+    }
+    .logo-bar img {
+      width: 300px;
+    }
+
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 4rem 2rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    section h2 {
+      font-size: 2.3rem;
+      color: #1db954;
+      margin-bottom: 1.5rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      margin-bottom: 2rem;
+      font-size: 1.2rem;
+      line-height: 1.8rem;
+    }
+
+    .equipe-box {
+      background: white;
+      border-radius: 10px;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      margin-bottom: 2rem;
+      font-size: 1.1rem;
+    }
+
+    .equipe-circles {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+    .pessoa {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .foto {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    .pessoa span {
+      margin-top: 0.8rem;
+      font-weight: 600;
+    }
+
+    .footer-background {
+      background: url('showsdentro11.png') no-repeat center center/cover;
+      opacity: 0.25;
+      height: 60vh;
+      margin-top: 80px;
+    }
+
+    footer {
+      background-color: #111;
+      color: #ccc;
+      padding: 2rem 1rem;
+      text-align: center;
+      position: relative;
+      z-index: 3;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#quem-somos">Quem Somos</a>
+    <a href="#problema">Problemas</a>
+    <a href="#solucao">Solução</a>
+    <a href="#equipe">Nosso Time</a>
+    <a href="#contato">Contato</a>
+  </nav>
+
+  <div class="hero">
+    <div class="logo-bar">
+      <img src="1 (2).png" alt="Logo">
+    </div>
+  </div>
+
+  <section id="quem-somos">
+    <h2><i class="fas fa-circle-info"></i> Quem Somos</h2>
+    <div class="card">
+      <p>Somos quatro estudantes de Economia da FGV unidos pelo objetivo de transformar o mercado de revenda de ingressos. Diante de fraudes, insegurança e ineficiência, decidimos agir com inovação e responsabilidade. Aliamos nosso olhar analítico à paixão por cultura e eventos, com foco em soluções acessíveis, justas e seguras. A Tickets For All é fruto da nossa vontade de construir um mercado mais confiável e organizado — por todos e para todos.</p>
+    </div>
+  </section>
+
+  <section id="problema">
+    <h2><i class="fas fa-triangle-exclamation"></i> Os Problemas</h2>
+    <div class="card">
+      <h3><i class="fas fa-user-shield"></i> Falta de segurança</h3>
+      <p>O mercado de revenda é repleto de fraudes, com ingressos falsos circulando e usuários inseguros sobre a legitimidade de suas compras.</p>
+    </div>
+    <div class="card">
+      <h3><i class="fas fa-ban"></i> Ineficiência e desperdício</h3>
+      <p>Pessoas desistem de ir a eventos e não têm uma forma confiável de revender seus ingressos. Isso gera eventos com cadeiras vazias e fãs sem acesso.</p>
+    </div>
+  </section>
+
+  <section id="solucao">
+    <h2><i class="fas fa-lightbulb"></i> A Solução</h2>
+    <div class="card">
+      <p>A Tickets For All oferece uma plataforma segura e integrada para revenda de ingressos, com autenticação digital, interface intuitiva e suporte ao consumidor. Nosso sistema transforma revenda em oportunidade e confiança.</p>
+    </div>
+  </section>
+
+  <section id="equipe">
+    <h2><i class="fas fa-users"></i> Nosso Time</h2>
+    <div class="equipe-box">
+      <p>Grupo de estudantes de Economia da FGV que está construindo a base de um mercado secundário justo, seguro e sustentável.</p>
+    </div>
+    <div class="equipe-circles">
+      <div class="pessoa">
+        <div class="foto"></div>
+        <span>Arthur Ribeiro</span>
+      </div>
+      <div class="pessoa">
+        <img src="Lucas Maia.jpeg" alt="Lucas Maia" class="foto">
+        <span>Lucas Maia</span>
+      </div>
+      <div class="pessoa">
+        <img src="LF2.jpeg" alt="Luiz Batista" class="foto">
+        <span>Luiz Batista</span>
+      </div>
+      <div class="pessoa">
+        <img src="Pedro Migon.jpeg" alt="Pedro Migon" class="foto">
+        <span>Pedro Migon</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato">
+    <h2><i class="fas fa-envelope"></i> Contato</h2>
+    <div class="card">
+      <p>Email: contato@ticketsforall.com.br</p>
+      <p>Instagram: @ticketsforall</p>
+    </div>
+  </section>
+
+  <div class="footer-background"></div>
+
+  <footer>
+    &copy; 2025 Tickets For All — Todos os direitos reservados.
+  </footer>
+
+</body>
+</html>
+"""
+
+# Salvar o novo HTML com a seção de equipe reinserida
+html_completo_com_equipe_path = "/mnt/data/tfa_site_com_equipe_reinserida.html"
+with open(html_completo_com_equipe_path, "w", encoding="utf-8") as f:
+    f.write(html_com_equipe_reinserida)
+
+html_completo_com_equipe_path
